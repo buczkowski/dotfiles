@@ -25,8 +25,3 @@ blockip () { sudo /sbin/iptables -I INPUT -s "$*" -j DROP; }
 # unblock IP
 unblockip () { sudo /sbin/iptables -D INPUT -s "$*" -j DROP; }
 
-# make java use GTK
-export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dswing.crossplatformlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel ${_JAVA_OPTIONS}"
-
-# lazy VASSAL
-alias VASSAL='./Documents/Software/VASSAL-3.2.17/VASSAL.sh'
